@@ -1,0 +1,28 @@
+[build-system]
+requires = ["hatchling>=1.26"]
+build-backend = "hatchling.build"
+
+[project]
+name = "marketplace-mcp"
+version = "0.1.0"
+description = "Small read-only marketplace MCP with a uniform provider interface"
+requires-python = ">=3.12"
+dependencies = ["mcp>=1.20,<2", "httpx>=0.28,<0.29", "pydantic>=2.10,<3"]
+
+[project.scripts]
+marketplace-mcp = "marketplace_mcp.__main__:main"
+
+[dependency-groups]
+dev = ["pytest>=8,<10", "pytest-asyncio>=0.24,<2", "ruff>=0.9", "build>=1.2"]
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/marketplace_mcp"]
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+testpaths = ["tests"]
+
+[tool.ruff]
+target-version = "py312"
+line-length = 110
+extend-exclude = ["src/marketplace_mcp/vendor"]

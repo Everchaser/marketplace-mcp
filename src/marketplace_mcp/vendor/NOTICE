@@ -1,0 +1,7 @@
+yandex_ssr.py is copied without modification from ru-marketplace-mcp.
+Source: packages/yandex-connector/src/yandex_connector/ssr.py
+Tag: v2.4.2
+Commit: e758a4770b5625a68ab08ab3d2d55622a33a997e
+Copyright (c) 2026 Vladimir-Human; MIT license (see LICENSE).
+Its price_with_plus name and comments do NOT verify discount eligibility.
+The adapter reports an unverified conditional price, not assured Plus eligibility.
