@@ -1,5 +1,7 @@
 """CLI: stdout is reserved exclusively for MCP JSON-RPC."""
 
+import utils.transport
+import utils.session
 import argparse
 from contextlib import nullcontext
 
